@@ -40,13 +40,13 @@
             android:layout_height="wrap_content"
             android:text="Zipcode"
             android:gravity="center"
-            android:onClick=""/>
+            android:onClick="goto_zipcode"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Barcode"
             android:gravity="center"
-            android:onClick=""/>
+            android:onClick="goto_barcode"/>
     </LinearLayout>
 </RelativeLayout>

@@ -17,4 +17,14 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ProductSearch.class);
         startActivity(intent);
     }
+
+    public void goto_zipcode(View view) {
+        Intent intent = new Intent(this, Zipcode.class);
+        startActivity(intent);
+    }
+
+    public void goto_barcode(View view) {
+        Intent intent = new Intent(this, Barcode.class);
+        startActivity(intent);
+    }
 }
