@@ -3,6 +3,7 @@
     package="com.example.morganhoward.recycleapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -17,7 +18,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ProductSearch"></activity>
+        <activity android:name=".ProductSearch" />
+        <activity android:name=".Zipcode" />
+        <activity android:name=".Barcode"></activity>
     </application>
 
 </manifest>
