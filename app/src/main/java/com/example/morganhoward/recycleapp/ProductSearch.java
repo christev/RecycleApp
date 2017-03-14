@@ -16,7 +16,7 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-// sources:
+//  sources:
 // (1) https://www.thorntech.com/2016/03/parsing-json-android-using-volley-library/
 // (2) https://developer.android.com/training/volley/request.html#request-json
 public class ProductSearch extends AppCompatActivity {
