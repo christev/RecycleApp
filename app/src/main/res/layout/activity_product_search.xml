@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_product_search"
     android:layout_width="match_parent"
@@ -12,18 +12,117 @@
     tools:context="com.example.morganhoward.recycleapp.ProductSearch">
 
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="You're on the product search screen"
-        android:gravity="center"/>
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="You're on the product search screen"-->
+        <!--android:gravity="center"/>-->
+
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="default"-->
+        <!--android:id="@+id/jsondata"-->
+        <!--android:gravity="center"/>-->
 
     <TextView
-        android:layout_width="match_parent"
+        android:id="@+id/textView"
+        android:layout_width="99dp"
         android:layout_height="wrap_content"
-        android:text="default"
-        android:id="@+id/jsondata"
-        android:gravity="center"/>
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="Look Up Recycling Information By UPC"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="99dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="12dp"
+        android:text="Zip Code:"/>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="99dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Product UPC:"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true"/>
+
+    <EditText
+        android:id="@+id/EditTextZip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/EditTextUPC"
+        android:layout_below="@+id/textView1"
+        android:ems="10"
+        android:inputType="number"
+        android:text="97225"
+        android:textSize="14sp"/>
+
+    <EditText
+        android:id="@+id/EditTextUPC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView1"
+        android:layout_alignBottom="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:inputType="number"
+        android:text="016000275690"
+        android:textSize="14sp"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Look Up"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignParentEnd="true"
+        android:onClick="get_materials"/>
+
+    <TextView
+        android:id="@+id/productLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/EditTextZip"
+        android:layout_toStartOf="@+id/EditTextZip"
+        android:text="Product:"
+        android:textSize="14sp"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/product"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/EditTextZip"
+        android:layout_toEndOf="@+id/productLabel"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/recycleInfoLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/productLabel"
+        android:paddingTop="5dp"
+        android:text="Recycling information:"
+        android:textSize="16sp"
+        android:visibility="invisible"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/recycleInfoLabel"/>
+
+</RelativeLayout>
 
